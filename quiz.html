@@ -1,0 +1,126 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>EconomyValues Quiz</title>
+<link rel="icon" type="x-icon" href="icon.png">
+<link rel="shortcut icon" type="x-icon" href="icon.png">
+<meta charset="utf-8">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6511426299019766",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body>
+<script type="application/javascript"
+        src="questions.js">
+</script>
+<h1>EconomyValues</h1>
+<hr>
+<h2 style="text-align:center;" id="question-number">It should appear</h2>
+<p class="question" id="question-text"></p>
+<button class="button" onclick="next_question( 1.0)" style="background-color: #00c000;">Strongly Agree</button> <br>
+<button class="button" onclick="next_question( 0.5)" style="background-color: #00e000;">Agree</button> <br>
+<button class="button" onclick="next_question( 0.0)" style="background-color: #757575;">Neutral</button> <br>
+<button class="button" onclick="next_question(-0.5)" style="background-color: #e00000;">Disagree</button> <br>
+<button class="button" onclick="next_question(-1.0)" style="background-color: #c00000;">Strongly Disagree</button> <br>
+<button class="small_button" onclick="prev_question()" id="back_button">Back</button>
+<button class="small_button_off" id="back_button_off">Back</button><br>
+
+<!-- Website visit statistics - no personal information is collected! -->
+<script type="text/javascript">
+var sc_project=11325211;
+var sc_invisible=1;
+var sc_security="fd9f0659";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
+stats"></a></div></noscript>
+
+<!-- JavaScript for the test itself -->
+<script>
+    var max_bregu, max_bprop, max_brepa, max_btrad, max_bwork, max_bcont, max_bindu; // Max possible scores
+    max_bregu = max_bprop = max_brepa = max_btrad = max_bwork = max_bcont = max_bindu = 0;
+    var bregu, bprop, brepa, btrad, bwork, bcont, bindu; // User's scores
+    bregu = bprop = brepa = btrad = bwork = bcont = bindu = 0;
+    var qn = 0; // Question number
+    var prev_answer = null;
+    init_question();
+    for (var i = 0; i < questions.length; i++) {
+        max_bregu += Math.abs(questions[i].effect.bregu)
+        max_bprop += Math.abs(questions[i].effect.bprop)
+        max_brepa += Math.abs(questions[i].effect.brepa)
+        max_btrad += Math.abs(questions[i].effect.btrad)
+        max_bwork += Math.abs(questions[i].effect.bwork)
+        max_bcont += Math.abs(questions[i].effect.bcont)
+        max_bindu += Math.abs(questions[i].effect.bindu)
+    }
+    function init_question() {
+        document.getElementById("question-text").innerHTML = questions[qn].question;
+        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
+        if (prev_answer == null) {
+            document.getElementById("back_button").style.display = 'none';
+            document.getElementById("back_button_off").style.display = 'block';
+        } else {
+            document.getElementById("back_button").style.display = 'block';
+            document.getElementById("back_button_off").style.display = 'none';
+        }
+
+    }
+
+    function next_question(mult) {
+        bregu += mult*questions[qn].effect.bregu
+        bprop += mult*questions[qn].effect.bprop
+        brepa += mult*questions[qn].effect.brepa
+        btrad += mult*questions[qn].effect.btrad
+        bwork += mult*questions[qn].effect.bwork
+        bcont += mult*questions[qn].effect.bcont
+        bindu += mult*questions[qn].effect.bindu
+        qn++;
+        prev_answer = mult;
+        if (qn < questions.length) {
+            init_question();
+        } else {
+            results();
+        }
+    }
+    function prev_question() {
+        if (prev_answer == null) {
+            return;
+        }
+        qn--;
+        bregu -= prev_answer * questions[qn].effect.bregu;
+        bprop -= prev_answer * questions[qn].effect.bprop;
+        brepa -= prev_answer * questions[qn].effect.brepa;
+        btrad -= prev_answer * questions[qn].effect.btrad;
+        bwork -= prev_answer * questions[qn].effect.bwork;
+        bcont -= prev_answer * questions[qn].effect.bcont;
+        bindu -= prev_answer * questions[qn].effect.bindu;
+        prev_answer = null;
+        init_question();
+
+    }
+    function calc_score(score,max) {
+        return (100*(max+score)/(2*max)).toFixed(1)
+    }
+    function results() {
+        location.href = `results.html`
+            + `?regu=${calc_score(bregu,max_bregu)}`
+            + `&stat=${calc_score(bprop,max_bprop)}`
+            + `&equa=${calc_score(brepa,max_brepa)}`
+            + `&prot=${calc_score(btrad,max_btrad)}`
+            + `&work=${calc_score(bwork,max_bwork)}`
+            + `&mono=${calc_score(bcont,max_bcont)}`
+            + `&envi=${calc_score(bindu,max_bindu)}`
+    }
+</script>
+</body>

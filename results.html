@@ -1,0 +1,288 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>EconomyValues Results</title>
+<link rel="icon" type="x-icon" href="icon.png">
+<link rel="shortcut icon" type="x-icon" href="icon.png">
+<meta charset="utf-8">
+<script>
+  version = "EconomyValues" //Remember to update this before making changes to the test itself!
+</script>
+</head>
+<script type="application/javascript"
+        src="ideologies.js">
+</script>
+
+<body>
+<h1>EconomyValues</h1>
+<hr>
+
+<h1>Results</h1>
+
+<h2>Regulation Axis : <span class="weight-300" id="bregu"></span></h2>
+<div class="axis">
+    <img id="img-regu" src="value_images/regulation.png" height="128pt"/>
+    <div class="bar regu" id="bar-regu"><div class="text-wrapper" id="regu"></div></div>
+    <div class="bar lais" id="bar-lais"><div class="text-wrapper" id="lais"></div></div>
+    <img id="img-lais" src="value_images/laissez faire.png" height="128pt"/>
+</div>
+<h2>Property Axis : <span class="weight-300" id="bprop"></span></h2>
+<div class="axis">
+    <img id="img-stat" src="value_images/state.png" height="128pt"/>
+    <div class="bar stat" id="bar-stat"><div class="text-wrapper" id="stat"></div></div>
+    <div class="bar priv" id="bar-priv"><div class="text-wrapper" id="priv"></div></div>
+    <img id="img-priv" src="value_images/private.png" height="128pt"/>
+</div>
+<h2>Repartition Axis : <span class="weight-300" id="brepa"></span></h2>
+<div class="axis">
+    <img id="img-equa" src="value_images/equality.png" height="128pt"/>
+    <div class="bar equa" id="bar-equa"><div class="text-wrapper" id="equa"></div></div>
+    <div class="bar weal" id="bar-weal"><div class="text-wrapper" id="weal"></div></div>
+    <img id="img-weal" src="value_images/wealth.png" height="128pt"/>
+</div>
+<h2>Trade Axis : <span class="weight-300" id="btrad"></span></h2>
+<div class="axis">
+    <img id="img-prot" src="value_images/protectionism.png" height="128pt"/>
+    <div class="bar prot" id="bar-prot"><div class="text-wrapper" id="prot"></div></div>
+    <div class="bar free" id="bar-free"><div class="text-wrapper" id="free"></div></div>
+    <img id="img-free" src="value_images/free trade.png" height="128pt"/>
+</div>
+<h2>Work Axis : <span class="weight-300" id="bwork"></span></h2>
+<div class="axis">
+    <img id="img-work" src="value_images/workers.png" height="128pt"/>
+    <div class="bar work" id="bar-work"><div class="text-wrapper" id="work"></div></div>
+    <div class="bar owne" id="bar-owne"><div class="text-wrapper" id="owne"></div></div>
+    <img id="img-owne" src="value_images/owners.png" height="128pt"/>
+</div>
+<h2>Control Axis : <span class="weight-300" id="bcont"></span></h2>
+<div class="axis">
+    <img id="img-mono" src="value_images/monopoly.png" height="128pt"/>
+    <div class="bar mono" id="bar-mono"><div class="text-wrapper" id="mono"></div></div>
+    <div class="bar comp" id="bar-comp"><div class="text-wrapper" id="comp"></div></div>
+    <img id="img-comp" src="value_images/competition.png" height="128pt"/>
+</div>
+<h2>Industry Axis : <span class="weight-300" id="bindu"></span></h2>
+<div class="axis">
+    <img id="img-envi" src="value_images/environment.png" height="128pt"/>
+    <div class="bar envi" id="bar-envi"><div class="text-wrapper" id="envi"></div></div>
+    <div class="bar indu" id="bar-indu"><div class="text-wrapper" id="indu"></div></div>
+    <img id="img-indu" src="value_images/industry.png" height="128pt"/>
+</div>
+<h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
+<p>There's no closest match for now, so cope with the axes lmao</p>
+<p>You think your results should be integrated into the closest matches ? Send them to me on Discord ( Quark#0741 ) or on Gmail ( beaulieu.renaud@gmail.com ) . </p>
+<hr/>
+<img src="" id="banner">
+<button class="button" onclick="location.href='index.html';" style="background-color: #00b5ff;">Back</button> <br>
+<!-- Website visit statistics - no personal information is collected! -->
+<script type="text/javascript">
+var sc_project=11325211;
+var sc_invisible=1;
+var sc_security="fd9f0659";
+var scJsHost = (("https:" == document.location.workocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
+stats"></a></div></noscript>
+<script>
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1)
+           var vars = query.split("&")
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=")
+                   if(pair[0] == variable) {return pair[1]}
+           }
+           return(NaN);
+    }
+
+    function setBarValue(name, value) {
+        innerel = document.getElementById(name)
+        outerel = document.getElementById("bar-" + name)
+        outerel.style.width = (value + "%")
+        innerel.innerHTML = (value + "%")
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+            innerel.style.visibility = "hidden"
+        }
+    }
+
+    breguArray = ["Planned","Dirigisme","Regulationism","Neutral","Free Market","Laissez Faire","Economic Chaos"]
+    bpropArray = ["Socialism","Social Democracy","Mixed Economy","Neutral","Economic Liberalism","Capitalism","Privatism"]
+    brepaArray = ["Communism","Distributism","Welfarism","Neutral","Charity","Social Darwinism","Corporate Welfare"]
+    btradArray = ["Autarky","Mercantilism","Protectionism","Neutral","Free Trade","Global Economy","Interdependence"]
+    bworkArray = ["Worker Owned","Elected","Unionized","Neutral","Traditional","Hierarchical","Brutal"]
+    bcontArray = ["Monopoly","Corporatism","Big Business","Neutral","Small Business","Competition","Duellism"]
+    binduArray = ["Deep Ecology","Environmental","Sustainable","Neutral","Productive","Industrial","Anthropocentric"]
+
+    function setLabel(val,ary) {
+        if (val > 100) { return "Off Compass" } else
+        if (val > 85) { return ary[0] } else
+        if (val > 70) { return ary[1] } else
+        if (val > 55) { return ary[2] } else
+        if (val >= 45) { return ary[3] } else
+        if (val >= 30) { return ary[4] } else
+        if (val >= 15) { return ary[5] } else
+        if (val >= 0) { return ary[6] } else
+        	{return "Off Compass"}
+    }
+
+    regu = getQueryVariable("regu")
+    stat = getQueryVariable("stat")
+    equa = getQueryVariable("equa")
+    prot = getQueryVariable("prot")
+    work = getQueryVariable("work")
+    mono = getQueryVariable("mono")
+    envi = getQueryVariable("envi")
+    lais = (100 - regu).toFixed(1)
+    priv = (100 - stat).toFixed(1)
+    weal = (100 - equa).toFixed(1)
+    free = (100 - prot).toFixed(1)
+    owne = (100 - work).toFixed(1)
+    comp = (100 - mono).toFixed(1)
+    indu = (100 - envi).toFixed(1)
+
+    setBarValue("regu", regu)
+    setBarValue("lais", lais)
+    setBarValue("stat", stat)
+    setBarValue("priv", priv)
+    setBarValue("equa", equa)
+    setBarValue("weal", weal)
+    setBarValue("prot", prot)
+    setBarValue("free", free)
+    setBarValue("work", work)
+    setBarValue("owne", owne)
+    setBarValue("mono", mono)
+    setBarValue("comp", comp)
+    setBarValue("envi", envi)
+    setBarValue("indu", indu)
+
+    document.getElementById("bregu").innerHTML = setLabel(regu, breguArray)
+    document.getElementById("bprop").innerHTML = setLabel(stat, bpropArray)
+    document.getElementById("brepa").innerHTML = setLabel(equa, brepaArray)
+    document.getElementById("btrad").innerHTML = setLabel(prot, btradArray)
+    document.getElementById("bwork").innerHTML = setLabel(work, bworkArray)
+    document.getElementById("bcont").innerHTML = setLabel(mono, bcontArray)
+    document.getElementById("bindu").innerHTML = setLabel(envi, binduArray)
+
+    ideology = ""
+    ideodist = Infinity
+    for (var i = 0; i < ideologies.length; i++) {
+        dist = 0
+        dist += Math.abs(ideologies[i].stats.bregu - regu)*1
+        dist += Math.abs(ideologies[i].stats.bprop - stat)*1
+        dist += Math.abs(ideologies[i].stats.brepa - equa)*1
+        dist += Math.abs(ideologies[i].stats.btrad - prot)*1
+        dist += Math.abs(ideologies[i].stats.bwork - work)*1
+        dist += Math.abs(ideologies[i].stats.bcont - mono)*1
+        dist += Math.abs(ideologies[i].stats.bindu - envi)*1
+        if (dist < ideodist) {
+            ideology = ideologies[i].name
+            ideodist = dist
+        }
+    }
+    document.getElementById("ideology-label").innerHTML = ideology
+
+    function createImage(src, x, y, w, h) {
+        img = new Image ()
+        img.src = src
+        img.onLoad = function() {
+            ctx.drawImage(img, x, y, w, h)
+        }
+    }
+
+    window.onload = function() {
+        var c = document.createElement("canvas")
+        var ctx = c.getContext("2d")
+        c.width = 800;
+        c.height = 1540;
+        ctx.fillStyle = "#e0e0e0"
+        ctx.fillRect(0,0,800,1540);
+
+        img = document.getElementById("img-regu")
+        ctx.drawImage(img, 20, 170, 100, 100);
+        img = document.getElementById("img-lais")
+        ctx.drawImage(img, 680, 170, 100, 100)
+        img = document.getElementById("img-stat")
+        ctx.drawImage(img, 20, 290, 100, 100)
+        img = document.getElementById("img-priv")
+        ctx.drawImage(img, 680, 290, 100, 100)
+        img = document.getElementById("img-equa")
+        ctx.drawImage(img, 20, 410, 100, 100)
+        img = document.getElementById("img-weal")
+        ctx.drawImage(img, 680, 410, 100, 100)
+        img = document.getElementById("img-work")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-free")
+        ctx.drawImage(img, 680, 530, 100, 100)
+        img = document.getElementById("img-mono")
+        ctx.drawImage(img, 20, 650, 100, 100);
+        img = document.getElementById("img-comp")
+        ctx.drawImage(img, 680, 650, 100, 100)
+        img = document.getElementById("img-envi")
+        ctx.drawImage(img, 20, 770, 100, 100)
+        img = document.getElementById("img-indu")
+        ctx.drawImage(img, 680, 770, 100, 100)
+        img = document.getElementById("img-v81")
+        ctx.drawImage(img, 20, 890, 100, 100)
+        img = document.getElementById("img-v82")
+        ctx.drawImage(img, 680, 890, 100, 100)
+
+        ctx.fillStyle="#000000"
+        ctx.fillRect(120, 180, 560, 80)
+        ctx.fillRect(120, 300, 560, 80)
+        ctx.fillRect(120, 420, 560, 80)
+        ctx.fillRect(120, 540, 560, 80)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(120, 184, 5.6*regu-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(682-5.6*lais, 184, 5.6*lais-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(120, 304, 5.6*stat-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(682-5.6*priv, 304, 5.6*priv-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(120, 424, 5.6*equa-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(682-5.6*weal, 424, 5.6*weal-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(120, 544, 5.6*work-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(682-5.6*free, 544, 5.6*free-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.font="700 60px Montserrat"
+        ctx.textAlign="left"
+        ctx.fillText("CapValues", 20, 90)
+        ctx.font="40px Montserrat"
+        ctx.fillText(ideology, 20, 140)
+
+        ctx.textAlign="left"
+        if (regu > 30) {ctx.fillText(regu + "%", 130, 237.5)}
+        if (stat > 30) {ctx.fillText(stat + "%", 130, 357.5)}
+        if (equa > 30) {ctx.fillText(equa + "%", 130, 477.5)}
+        if (work > 30) {ctx.fillText(work + "%", 130, 597.5)}
+        ctx.textAlign="right"
+        if (lais > 30) {ctx.fillText(lais + "%", 670, 237.5)}
+        if (priv > 30) {ctx.fillText(priv + "%", 670, 357.5)}
+        if (weal > 30) {ctx.fillText(weal + "%", 670, 477.5)}
+        if (free > 30) {ctx.fillText(free + "%", 670, 597.5)}
+
+        ctx.textAlign="center"
+        ctx.fillText(" Axis: " + document.getElementById("bregu").innerHTML, 400, 175)
+        ctx.fillText(" Axis: " + document.getElementById("bprop").innerHTML, 400, 295)
+        ctx.fillText(" Axis: " + document.getElementById("brepa").innerHTML, 400, 415)
+        ctx.fillText(" Axis: " + document.getElementById("btrad").innerHTML, 400, 535)
+        ctx.fillText(" Axis: " + document.getElementById("bwork").innerHTML, 400, 655)
+        ctx.fillText(" Axis: " + document.getElementById("bcont").innerHTML, 400, 775)
+        ctx.fillText(" Axis: " + document.getElementById("bwork").innerHTML, 400, 895)
+        ctx.fillText(" Axis: " + document.getElementById("b8").innerHTML, 400, 1015)
+
+        document.getElementById("banner").src = c.toDataURL();
+    }
+    </script>
+</body>
