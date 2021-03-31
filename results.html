@@ -174,11 +174,11 @@ stats"></a></div></noscript>
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.abs(ideologies[i].stats.bregu - regu)*1
-        dist += Math.abs(ideologies[i].stats.bprop - stat)*1
-        dist += Math.abs(ideologies[i].stats.brepa - equa)*1
+        dist += Math.abs(ideologies[i].stats.bregu - regu)*2
+        dist += Math.abs(ideologies[i].stats.bprop - stat)*2
+        dist += Math.abs(ideologies[i].stats.brepa - equa)*1.5
         dist += Math.abs(ideologies[i].stats.btrad - prot)*1
-        dist += Math.abs(ideologies[i].stats.bwork - work)*1
+        dist += Math.abs(ideologies[i].stats.bwork - work)*1.5
         dist += Math.abs(ideologies[i].stats.bcont - mono)*1
         dist += Math.abs(ideologies[i].stats.bindu - envi)*1
         if (dist < ideodist) {
@@ -228,10 +228,6 @@ stats"></a></div></noscript>
         ctx.drawImage(img, 20, 770, 100, 100)
         img = document.getElementById("img-indu")
         ctx.drawImage(img, 680, 770, 100, 100)
-        img = document.getElementById("img-v81")
-        ctx.drawImage(img, 20, 890, 100, 100)
-        img = document.getElementById("img-v82")
-        ctx.drawImage(img, 680, 890, 100, 100)
 
         ctx.fillStyle="#000000"
         ctx.fillRect(120, 180, 560, 80)
@@ -262,15 +258,21 @@ stats"></a></div></noscript>
         ctx.fillText(ideology, 20, 140)
 
         ctx.textAlign="left"
-        if (regu > 30) {ctx.fillText(regu + "%", 130, 237.5)}
-        if (stat > 30) {ctx.fillText(stat + "%", 130, 357.5)}
-        if (equa > 30) {ctx.fillText(equa + "%", 130, 477.5)}
-        if (work > 30) {ctx.fillText(work + "%", 130, 597.5)}
+        if (regu > 30) {ctx.fillText(regu + "%", 130, 232.5)}
+        if (stat > 30) {ctx.fillText(stat + "%", 130, 352.5)}
+        if (equa > 30) {ctx.fillText(equa + "%", 130, 472.5)}
+        if (prot > 30) {ctx.fillText(prot + "%", 130, 592.5)}
+        if (work > 30) {ctx.fillText(work + "%", 130, 712.5)}
+        if (mono > 30) {ctx.fillText(mono + "%", 130, 832.5)}
+        if (envi > 30) {ctx.fillText(envi + "%", 130, 952.5)}
         ctx.textAlign="right"
-        if (lais > 30) {ctx.fillText(lais + "%", 670, 237.5)}
-        if (priv > 30) {ctx.fillText(priv + "%", 670, 357.5)}
-        if (weal > 30) {ctx.fillText(weal + "%", 670, 477.5)}
-        if (free > 30) {ctx.fillText(free + "%", 670, 597.5)}
+        if (lais > 30) {ctx.fillText(lais + "%", 670, 232.5)}
+        if (priv > 30) {ctx.fillText(priv + "%", 670, 352.5)}
+        if (weal > 30) {ctx.fillText(weal + "%", 670, 472.5)}
+        if (free > 30) {ctx.fillText(free + "%", 670, 592.5)}
+        if (owne > 30) {ctx.fillText(owne + "%", 670, 712.5)}
+        if (comp > 30) {ctx.fillText(comp + "%", 670, 832.5)}
+        if (indu > 30) {ctx.fillText(indu + "%", 670, 952.5)}
 
         ctx.textAlign="center"
         ctx.fillText(" Axis: " + document.getElementById("bregu").innerHTML, 400, 175)
@@ -280,7 +282,6 @@ stats"></a></div></noscript>
         ctx.fillText(" Axis: " + document.getElementById("bwork").innerHTML, 400, 655)
         ctx.fillText(" Axis: " + document.getElementById("bcont").innerHTML, 400, 775)
         ctx.fillText(" Axis: " + document.getElementById("bwork").innerHTML, 400, 895)
-        ctx.fillText(" Axis: " + document.getElementById("b8").innerHTML, 400, 1015)
 
         document.getElementById("banner").src = c.toDataURL();
     }
