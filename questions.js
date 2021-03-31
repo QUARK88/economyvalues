@@ -576,7 +576,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Worker unions ensure good workplace conditions for everyone.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -588,7 +588,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Decision making belongs to the owners of the compagnies.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -600,7 +600,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "According more rights to workers increase their productivity.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -612,7 +612,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Work unions often complicate too much decisions.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -624,7 +624,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Employers should listen more to their worker's ideas.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -636,7 +636,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "A strong hierarchy must exist in all compagnies.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -648,7 +648,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "There should be greater pay equality between owners and workers.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -660,7 +660,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Sometimes, we need to show to the workers who is the boss.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -672,7 +672,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Workers should be given control over the compagnies.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -684,7 +684,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Slavery should be used more often as it is efficient.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -696,7 +696,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Workers should rule over their employers.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -708,7 +708,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Owners should have the right to do whatever they want with their employees.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -720,7 +720,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Uniting similar compagnies make them stronger.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -732,7 +732,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Local markets work better than national corporations.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -744,7 +744,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "It is easier to plan ahead with big groups than small actors.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -756,7 +756,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Laws must be enacted to ensure an healthy competition between producers.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -768,7 +768,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Monopolies are often a good thing as they bring stability.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -780,7 +780,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Competition between similar producers ensures the best prices.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -792,7 +792,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Compagnies should be present nationwide.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -804,7 +804,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "All subsidies for big businesses should be cutted.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -816,7 +816,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "All sectors should be united into one big compagny each.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -828,7 +828,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "When corporations become too big, we should forcefully break them in smaller parts.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -840,7 +840,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "We should stomp on small businesses as they make the market unstable.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -852,7 +852,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "An economy based on constant price duels would be ideal.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -864,7 +864,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Streets should be kept clean.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -876,7 +876,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Pollution is the price we pay for progress and we must embrace it.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -888,7 +888,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "We must make efforts to protect some species.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -900,7 +900,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "We simply cannot rely on only renewable resources.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -912,7 +912,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Drastic environmental changes must be made soon or irreversible consequences will happen.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -924,7 +924,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "We should not be afraid of polluting.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -936,7 +936,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "If sustainable alternatives to products aren't found, we should stop using them.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -948,7 +948,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Nature has no inherent worth and should not be considered as sacred.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -960,7 +960,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Reducing world population by force can be needed to reduce environmental destruction.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -972,7 +972,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "All available resources must be consumed.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -984,7 +984,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "A planet without humans would be preferable.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
@@ -996,7 +996,7 @@ questions = [
         }
     },
     {
-        "question": ".",
+        "question": "Only humanity is worth keeping in all species.",
         "effect": {
             "bregu": 0,
             "bprop": 0,
