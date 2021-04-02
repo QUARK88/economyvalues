@@ -17,10 +17,10 @@ ideologies = [
             "bregu": 80,
             "bprop": 55,
             "brepa": 35,
-            "btrad": 90,
-            "bwork": 65,
-            "bcont": 65,
-            "bindu": 30,
+            "btrad": 95,
+            "bwork": 70,
+            "bcont": 70,
+            "bindu": 35,
         }
     },
     {
@@ -117,6 +117,30 @@ ideologies = [
             "bwork": 100,
             "bcont": 0,
             "bindu": 80,
+        }
+    },
+    {
+        "name": "Capacitationism",
+        "stats": {
+            "bregu": 15,
+            "bprop": 45,
+            "brepa": 35,
+            "btrad": 5,
+            "bwork": 100,
+            "bcont": 50,
+            "bindu": 5,
+        }
+    },
+    {
+        "name": "Edwinism",
+        "stats": {
+            "bregu": 100,
+            "bprop": 100,
+            "brepa": 85,
+            "btrad": 75,
+            "bwork": 100,
+            "bcont": 70,
+            "bindu": 90,
         }
     }
 ];
