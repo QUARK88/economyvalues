@@ -39,6 +39,7 @@ p.question {
     min-height: 144pt;
     background-color: #c0c0c0;
     padding: 16pt;
+    border: 6px solid #000000;
     border-radius: 16pt;
     font-size: 36pt;
     display: flex;
@@ -78,11 +79,12 @@ img.center {
     min-width: 500pt;
 }
 .button {
-    background-color: #00b5ff;
+    background-color: #00a0e0;
     font-family: 'Montserrat', sans-serif;
-    border: none;
+    font-weight: bold;
+    border: 6px solid #000000;
     border-radius: 8pt;
-    color: white;
+    color: #ffffff;
     padding: 8pt;
     width: 50%;
     min-width: 500pt;
@@ -94,11 +96,12 @@ img.center {
     cursor: pointer;
 }
 .small_button, .small_button_off {
-    background-color: #333;
+    background-color: #505050;
     font-family: 'Montserrat', sans-serif;
-    border: none;
+    font-weight: bold;
+    border: 6px solid #000000;
     border-radius: 8pt;
-    color: white;
+    color: #ffffff;
     padding: 8pt;
     width: 10%;
     min-width: 100pt;
@@ -110,9 +113,10 @@ img.center {
     cursor: pointer;
 }
 .small_button_off {
-    background-color: #ddd;
-    color: #888;
-    border: 2px solid #888;
+    background-color: #c0c0c0;
+    font-weight: bold;
+    color: #505050;
+    border: 6px solid #000000;
     cursor: not-allowed;
     margin: -4px auto;
 }
@@ -128,7 +132,7 @@ div.bar {
     padding: 8pt;
     margin-top: 4pt;
     margin-bottom: 4pt;
-    border-width: 4px;
+    border-width: 6px;
     border-right-width: 1px;
     border-top-style: solid;
     border-bottom-style: solid;
