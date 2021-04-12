@@ -68,22 +68,12 @@
     <div class="bar indu" id="bar-indu"><div class="text-wrapper" id="indu"></div></div>
     <img id="img-indu" src="value_images/industry.png" height="128pt"/>
 </div>
-<h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
+<h2>Closest Match : <span class="weight-300" id="ideology-match"></span> % <span class="weight-300" id="ideology-label"></span></h2>
 <p>There's no closest match for now, so cope with the axes lmao</p>
 <p>You think your results should be integrated into the closest matches ? Send them to me on Discord ( Quark#0741 ) or on Gmail ( beaulieu.renaud@gmail.com ) . </p>
 <hr/>
 <img src="" id="banner">
-<button class="button" onclick="location.href='index.html';" style="background-color: #00b5ff;">Back</button> <br>
-<!-- Website visit statistics - no personal information is collected! -->
-<script type="text/javascript">
-var sc_project=11325211;
-var sc_invisible=1;
-var sc_security="fd9f0659";
-var scJsHost = (("https:" == document.location.workocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
+<button class="button" onclick="location.href='index.html';" style="background-color: #00a0e0;">Back</button> <br>
 </script>
 <noscript><div class="statcounter"><a title="web stats"
 href="http://statcounter.com/" target="_blank"><img
@@ -184,9 +174,11 @@ stats"></a></div></noscript>
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
+            ideomatch = 100-100*(ideodist/1000)
         }
     }
     document.getElementById("ideology-label").innerHTML = ideology
+    document.getElementById("ideology-match").innerHTML = ideomatch
 
     function createImage(src, x, y, w, h) {
         img = new Image ()
@@ -274,7 +266,7 @@ stats"></a></div></noscript>
         ctx.textAlign="left"
         ctx.fillText("EconomyValues", 20, 90)
         ctx.font="40px Montserrat"
-        ctx.fillText(ideology, 20, 140)
+        ctx.fillText(ideomatch, " % ", ideology, 20, 140)
 
         ctx.textAlign="left"
         if (regu > 30) {ctx.fillText(regu + "%", 130, 232.5)}
